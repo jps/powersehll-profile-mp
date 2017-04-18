@@ -14,6 +14,8 @@ Invoke-Expression ((gulp --completion=powershell) -join [System.Environment]::Ne
 
 
 #Custom Functions
+
+##Recursive file content search
 Function greprl ($FileType, $pattern)
 {
 	Get-ChildItem -Recurse $FileType | Select-String -Pattern $pattern | Select-Object -Unique Path
